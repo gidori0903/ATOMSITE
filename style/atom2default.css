@@ -1,0 +1,128 @@
+*{/*기본값설정*/
+    list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;	
+    color: white;
+    background-color: rgba(52, 63, 100, 1);
+}
+.guide{
+    height: 40px;
+    background-color: rgba(233, 219, 137, 1);
+}
+
+.intro{
+    display: flex;
+}
+.intro > div{
+    height: 84px;
+	background-color: rgba(52, 63, 100, 1);
+}
+.blank{
+}
+.univ_logo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.univ{
+    text-align: center;
+    margin-top: -3%;
+}
+.logo{
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu > li:hover{
+    background-color: #d49466;
+    border-radius: 4px;
+    padding: 2px 10px 4px 10px;
+}
+.menu > li > a > b{
+    font-size: 22px;   
+}
+/*intro 비율*/
+.intro > div:nth-child(1){flex:0.5}
+.intro > div:nth-child(2){flex:10.5;}
+.intro > div:nth-child(3){flex:7;}
+.intro > div:nth-child(4){flex:30;}
+.intro > div:nth-child(5){flex:10.5;}
+
+.center{
+	display: flex;
+	height: 756px;
+}
+.maincontent{
+	flex: 6;
+	background-image: url(../img/atomsite/background.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.wall{
+	flex: 1;
+	background-color: white;	
+}
+.end{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: rgba(52, 63, 100, 1);
+}
+
+.end > div{
+    text-align: center;
+	font-size: 14px;
+    color: rgba(146, 155, 177, 1);
+    height: 50px;
+}
+
+.end > div:nth-child(1){flex: 5;}
+.end > div:nth-child(2){flex: 11;}
+.end > div:nth-child(3){flex: 3;}
+.end > div:nth-child(4){flex: 11;}
+.end > div:nth-child(5){flex: 3;}
+.end > div:nth-child(6){flex: 11;}
+.end > div:nth-child(7){flex: 5;}
+
+.listbar{
+    display: none;
+    position: absolute;
+    top :58px;
+    right: 10px;
+}
+
+@media screen and (max-width: 1190px){/*화면이 작아졌을 때*/
+    .intro{
+        flex-direction: column;
+    }
+    .intro div{
+        height: 70px;
+    }
+    .univ_logo{
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-left: 20px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu > li{
+        margin: 10px;
+    }
+    .menu > li:hover{
+        width: 90%;
+        text-align: center;
+    }
+    .listbar{
+        display: block;
+    }
+    .menu.active{
+        display: flex;
+    }
+}
